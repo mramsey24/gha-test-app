@@ -24,3 +24,16 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Setup JFrog CLI
+      uses: jfrog/setup-jfrog-cli@v2
+       
+    - name: Run JFrog CLI
+      run: |
+          jf --version
+          # Collect environment variables for the build
+          # jf rt bce
+          # Collect VCS details from git and add them to the build
+          # jf rt bag
+          # Publish build info
+          # jf rt bp
