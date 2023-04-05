@@ -26,3 +26,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+  job2:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print Hello
+        run: echo "Hello, Step 2"
+        
