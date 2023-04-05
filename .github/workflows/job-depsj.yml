@@ -35,9 +35,9 @@ jobs:
 
   job3:
     runs-on: ubuntu-latest
-    if: always()
+    if: failure()
     needs: job2
     steps:
       - name: Print Goodbye
-        run: echo "See ya!"
+        run: echo "Failure detected!"
         
