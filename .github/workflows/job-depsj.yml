@@ -30,11 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: greet
     steps:
-      - name: Print Hello
-        run: echo "Hello, Step 2"
-  
+      - name: Failure TIme
+        run: return 1
+
   job3:
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     if: always()
     needs: job2
     steps:
